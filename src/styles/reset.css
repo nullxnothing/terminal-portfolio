@@ -4,34 +4,60 @@
   box-sizing: border-box;
 }
 
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
 html, body {
   height: 100%;
   overflow-x: hidden;
 }
 
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
 body {
-  background: #0a0a0a;
-  color: #00ff00;
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 14px;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-size: 16px;
   line-height: 1.6;
-  -webkit-font-smoothing: none;
-  -moz-osx-font-smoothing: unset;
 }
 
 a {
-  color: #00ff00;
-  text-decoration: underline;
-  text-decoration-color: rgba(0, 255, 0, 0.3);
-  transition: text-shadow 0.2s;
+  color: inherit;
+  text-decoration: none;
 }
 
-a:hover {
-  text-shadow: 0 0 8px rgba(0, 255, 0, 0.6);
-  text-decoration-color: #00ff00;
+img, video {
+  display: block;
+  max-width: 100%;
 }
 
 ::selection {
-  background: rgba(0, 255, 0, 0.2);
-  color: #00ff00;
+  background: var(--accent-muted);
+  color: var(--accent);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
 }

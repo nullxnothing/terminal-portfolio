@@ -1,14 +1,28 @@
+import './styles/tokens.css'
 import './styles/reset.css'
-import './styles/crt.css'
-import './styles/terminal.css'
-import { initBinaryRain } from './modules/binary-rain.js'
-import { startBoot } from './modules/boot-sequence.js'
+import './styles/typography.css'
+import './styles/grid.css'
+import './styles/components.css'
 
-// Init background rain
+import { initSmoothScroll } from './modules/smooth-scroll.js'
+import { initLoader } from './modules/loader.js'
+import { initBinaryRain } from './modules/binary-rain.js'
+import { renderCards } from './modules/cards.js'
+import { initScrollAnimations } from './modules/scroll-animations.js'
+
+// Init canvas rain (subtle)
 const canvas = document.getElementById('rain')
 initBinaryRain(canvas)
 
-// Start boot sequence after CRT animation begins
+// Init smooth scroll
+initSmoothScroll()
+
+// Render project and tool cards
+renderCards()
+
+// Start loader → then reveal content
 window.addEventListener('load', () => {
-  startBoot()
+  initLoader(() => {
+    initScrollAnimations()
+  })
 })

@@ -1,0 +1,35 @@
+:root {
+  /* Surfaces */
+  --bg-primary: #070707;
+  --bg-secondary: #0F0F0F;
+  --bg-elevated: #1A1A1A;
+  --bg-light: #EAEAEA;
+
+  /* Text */
+  --text-primary: #EAEAEA;
+  --text-secondary: #8A8A8A;
+  --text-muted: rgba(138, 138, 138, 0.75);
+  --text-on-light: #070707;
+
+  /* Accent */
+  --accent: #00FF88;
+  --accent-muted: rgba(0, 255, 136, 0.15);
+  --accent-glow: rgba(0, 255, 136, 0.3);
+
+  /* Borders */
+  --border-subtle: rgba(234, 234, 234, 0.06);
+  --border-medium: rgba(234, 234, 234, 0.12);
+
+  /* Grid */
+  --site-margin: clamp(1.25rem, 0.75rem + 2vw, 3rem);
+  --site-gutter: 1rem;
+
+  /* Transitions */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+
+  /* Fonts */
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --font-serif: 'DM Serif Display', serif;
+}

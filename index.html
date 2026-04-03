@@ -1,49 +1,124 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="lenis">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>nullxnothing</title>
-  <meta name="description" content="solana developer — building onchain tools & infrastructure" />
+  <meta name="description" content="solana developer - building onchain tools & infrastructure" />
   <meta property="og:title" content="nullxnothing" />
-  <meta property="og:description" content="solana developer — building onchain tools & infrastructure" />
+  <meta property="og:description" content="solana developer - building onchain tools & infrastructure" />
   <meta property="og:type" content="website" />
-  <meta name="theme-color" content="#00ff00" />
+  <meta name="theme-color" content="#070707" />
+  <link rel="icon" type="image/jpeg" href="/favicon.jpg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&family=DM+Serif+Display&display=swap" rel="stylesheet" />
 </head>
 <body>
+  <!-- Loader -->
+  <div id="loader">
+    <div id="loader-text"></div>
+    <div id="loader-bar"><div id="loader-fill"></div></div>
+  </div>
+
+  <!-- Canvas background -->
   <canvas id="rain"></canvas>
 
-  <div id="crt">
-    <div id="scanlines"></div>
-    <div id="vignette"></div>
-
-    <div id="terminal">
-      <div id="boot"></div>
-
-      <div id="identity" class="hidden">
-        <div id="name-text"></div>
-        <div id="descriptor"></div>
-        <div id="links-list" class="hidden"></div>
-      </div>
-
-      <div id="projects-section" class="hidden">
-        <div class="section-label" id="projects-label"></div>
-        <div id="projects-list"></div>
-      </div>
-
-      <div id="tools-section" class="hidden">
-        <div class="section-label" id="tools-label"></div>
-        <div id="tools-list"></div>
-      </div>
-
-      <div id="terminal-end" class="hidden">
-        <span class="cursor blink">_</span>
-      </div>
+  <!-- Navigation -->
+  <nav id="nav">
+    <a href="#" class="nav-logo">nullxnothing</a>
+    <div class="nav-links">
+      <a href="#about" class="nav-link mono">About</a>
+      <a href="#projects" class="nav-link mono">Projects</a>
+      <a href="#tools" class="nav-link mono">Tools</a>
+      <a href="https://x.com/nullxnothing" target="_blank" rel="noopener" class="nav-link mono">X</a>
+      <a href="https://github.com/nullxnothing" target="_blank" rel="noopener" class="nav-link mono">GitHub</a>
     </div>
-  </div>
+  </nav>
+
+  <!-- Main content -->
+  <main id="content">
+
+    <!-- Hero -->
+    <section id="hero" class="section">
+      <div class="grid-page">
+        <div class="hero-content">
+          <p class="hero-tag mono uppercase">Solana Developer</p>
+          <h1 class="hero-name" data-scramble>nullxnothing</h1>
+          <p class="hero-desc">Building onchain tools &amp; infrastructure</p>
+        </div>
+        <div class="hero-meta">
+          <div class="hero-meta-item">
+            <span class="mono uppercase label">Location</span>
+            <span>Remote</span>
+          </div>
+          <div class="hero-meta-item">
+            <span class="mono uppercase label">Focus</span>
+            <span>Security &amp; Tooling</span>
+          </div>
+          <div class="hero-meta-item">
+            <span class="mono uppercase label">Stack</span>
+            <span>TypeScript / Rust / Solana</span>
+          </div>
+        </div>
+        <div class="scroll-indicator mono uppercase">
+          <span>Scroll</span>
+          <svg width="12" height="24" viewBox="0 0 12 24" fill="none"><path d="M6 0v22M1 17l5 5 5-5" stroke="currentColor" stroke-width="1.5"/></svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section section-pin">
+      <div class="about-card">
+        <div class="grid-page">
+          <div class="about-inner">
+            <p class="mono uppercase label">About</p>
+            <h2 class="about-heading"><span class="sans">Building</span> <span class="serif">Onchain</span></h2>
+            <p class="about-text reveal-lines">I build security tools and developer infrastructure for Solana. From cabal detection engines to wallet CLIs with AI-native interfaces - I focus on the tooling that makes the ecosystem safer and easier to build on.</p>
+            <p class="about-text reveal-lines">Previously security research, now shipping open source tools used by traders and developers across the Solana ecosystem.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section">
+      <div class="grid-page">
+        <div class="section-header">
+          <span class="section-number mono">01</span>
+          <h2 class="section-title">Projects</h2>
+        </div>
+        <div class="card-grid" id="projects-grid"></div>
+      </div>
+    </section>
+
+    <!-- Tools -->
+    <section id="tools" class="section section-light">
+      <div class="grid-page">
+        <div class="section-header">
+          <span class="section-number mono">02</span>
+          <h2 class="section-title">Tools</h2>
+        </div>
+        <div class="card-grid" id="tools-grid"></div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer" class="section">
+      <div class="grid-page">
+        <div class="footer-inner">
+          <div class="footer-name">nullxnothing</div>
+          <div class="footer-links">
+            <a href="https://x.com/nullxnothing" target="_blank" rel="noopener" class="mono">x.com/nullxnothing</a>
+            <a href="https://github.com/nullxnothing" target="_blank" rel="noopener" class="mono">github.com/nullxnothing</a>
+          </div>
+          <div class="footer-cursor mono"><span class="blink">_</span></div>
+        </div>
+      </div>
+    </footer>
+
+  </main>
 
   <script type="module" src="/src/main.js"></script>
 </body>
