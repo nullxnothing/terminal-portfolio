@@ -5,7 +5,8 @@
   column-gap: var(--site-gutter);
   padding-inline: var(--site-margin);
   width: 100%;
-  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 /* Span utilities */

@@ -56,7 +56,7 @@ function animateAbout() {
   ScrollTrigger.create({
     trigger: section,
     start: 'top top',
-    end: '+=80%',
+    end: '+=40%',
     pin: true,
     scrub: 1,
     animation: gsap.to(card, {

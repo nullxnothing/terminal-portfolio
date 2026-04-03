@@ -50,7 +50,7 @@
   inset: 0;
   z-index: 0;
   pointer-events: none;
-  opacity: 0.04;
+  opacity: 0.08;
 }
 
 /* ═══════════════════════════════════════ */
@@ -189,28 +189,30 @@
 
 .section-light {
   background: var(--bg-light);
-  color: var(--text-on-light);
+  background-image: url('/assets/homepage/arcan3-banner.webp');
+  background-size: cover;
+  background-position: center;
+  color: var(--text-primary);
+  position: relative;
 }
 
-.section-light .label {
-  color: rgba(7, 7, 7, 0.35);
+.section-light::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(21, 21, 21, 0.4);
+  z-index: 0;
+}
+
+.section-light > .grid-page {
+  position: relative;
+  z-index: 1;
 }
 
 .section-light .card {
-  background: #fff;
-  border-color: rgba(7, 7, 7, 0.08);
-}
-
-.section-light .card-tags {
-  color: rgba(7, 7, 7, 0.55);
-}
-
-.section-light .card-link {
-  color: rgba(7, 7, 7, 0.65);
-}
-
-.section-light .card-link:hover {
-  color: var(--text-on-light);
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(234, 234, 234, 0.1);
+  backdrop-filter: blur(8px);
 }
 
 .section-header {
@@ -224,7 +226,7 @@
 }
 
 .section-light .section-header {
-  border-bottom-color: rgba(7, 7, 7, 0.08);
+  border-bottom-color: rgba(234, 234, 234, 0.1);
 }
 
 .section-number {
@@ -370,12 +372,30 @@
 
 .about-card {
   background: var(--bg-light);
-  color: var(--text-on-light);
+  background-image: url('/assets/homepage/research-banner.webp');
+  background-size: cover;
+  background-position: center;
+  color: var(--text-primary);
   border-radius: 24px;
   margin: 0 var(--site-margin);
   padding: 6rem 0;
   transform: scale(0.92);
   will-change: transform, border-radius;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(7, 7, 7, 0.45);
+  z-index: 0;
+}
+
+.about-card .grid-page {
+  position: relative;
+  z-index: 1;
 }
 
 .about-inner {
@@ -396,13 +416,9 @@
 .about-text {
   font-size: clamp(1rem, 0.875rem + 0.5vw, 1.125rem);
   line-height: 1.8;
-  color: rgba(7, 7, 7, 0.65);
+  color: rgba(234, 234, 234, 0.7);
   max-width: 640px;
   margin-bottom: 1.25rem;
-}
-
-.about-inner .label {
-  color: rgba(7, 7, 7, 0.3);
 }
 
 @media (max-width: 768px) {
@@ -453,7 +469,12 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.6s var(--ease-out-expo);
+  filter: grayscale(1) brightness(0.7) contrast(1.2);
+  transition: transform 0.6s var(--ease-out-expo), filter 0.6s var(--ease-out-expo);
+}
+
+.card:hover .card-image img {
+  filter: grayscale(0.5) brightness(0.8) contrast(1.1);
 }
 
 .card:hover .card-image img {
@@ -481,9 +502,6 @@
   color: var(--text-secondary);
 }
 
-.section-light .card-desc {
-  color: rgba(7, 7, 7, 0.55);
-}
 
 .card-tags {
   font-family: var(--font-mono);
@@ -528,7 +546,7 @@
 }
 
 .section-light .card-link:hover {
-  color: var(--text-on-light);
+  color: var(--text-primary);
 }
 
 @media (max-width: 768px) {

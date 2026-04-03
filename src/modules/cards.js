@@ -5,6 +5,7 @@ const projects = [
     tags: ['TypeScript', 'Solana', 'MPP'],
     github: 'nullxnothing/mpp-spl',
     live: 'npmjs.com/package/mpp-spl',
+    image: '/assets/arcan3/spine-animation.gif',
   },
   {
     name: 'internet402',
@@ -12,24 +13,28 @@ const projects = [
     tags: ['TypeScript', 'Solana'],
     github: 'nullxnothing/internet402',
     live: 'internet402.vercel.app',
+    image: '/assets/arcan3/comp-animation.gif',
   },
   {
     name: 'quanta',
     desc: 'Agent-native market making infrastructure on Solana',
     tags: ['TypeScript', 'Solana'],
     github: 'nullxnothing/quanta',
+    image: '/assets/arcan3/arch-animation.gif',
   },
   {
     name: 'devcred-agent',
     desc: 'Autonomous agent monitoring pump.fun launches and scoring deployer reputation',
     tags: ['TypeScript', 'AI Agent'],
     github: 'nullxnothing/devcred-agent',
+    image: '/assets/arcan3/spine-animation.gif',
   },
   {
     name: 'nullset-wallet-recovery',
     desc: 'Reclaim rent accounts, creator rewards, and track locked tokens across wallets',
     tags: ['TypeScript', 'Solana'],
     github: 'nullxnothing/nullset-solana-wallet-recovery',
+    image: '/assets/arcan3/comp-animation.gif',
   },
 ]
 
@@ -40,7 +45,7 @@ const tools = [
     tags: ['Next.js', 'Helius', '3D Graph'],
     github: 'nullxnothing/ricomaps',
     live: 'ricomaps.vercel.app',
-    image: '/assets/arcan3/subway.webp',
+    image: '/assets/arcan3/spine-animation.gif',
   },
   {
     name: 'TrenchLens',
@@ -48,14 +53,14 @@ const tools = [
     tags: ['TypeScript', 'Next.js'],
     github: 'nullxnothing/trenchlens',
     live: 'trenchlens.vercel.app',
-    image: '/assets/arcan3/sign.webp',
+    image: '/assets/arcan3/comp-animation.gif',
   },
   {
     name: 'Solblade',
     desc: 'AI-native Solana wallet CLI with scoped MCP server',
     tags: ['TypeScript', 'MCP'],
     github: 'nullxnothing/solblade',
-    image: '/assets/arcan3/z-render.webp',
+    image: '/assets/arcan3/arch-animation.gif',
   },
 ]
 
