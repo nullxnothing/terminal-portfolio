@@ -22,7 +22,7 @@ export function initBinaryRain(canvas) {
       return
     }
 
-    ctx.fillStyle = 'rgba(10, 10, 10, 0.12)'
+    ctx.fillStyle = 'rgba(7, 7, 7, 0.12)'
     ctx.fillRect(0, 0, canvas.width, canvas.height)
 
     ctx.font = '14px JetBrains Mono, monospace'
@@ -42,12 +42,12 @@ export function initBinaryRain(canvas) {
 
       // Varying opacity for depth
       const alpha = 0.03 + Math.random() * 0.05
-      ctx.fillStyle = `rgba(0, 255, 0, ${alpha})`
+      ctx.fillStyle = `rgba(0, 255, 136, ${alpha})`
       ctx.fillText(char, x, y)
 
       // Head of the drop is slightly brighter
       if (Math.random() > 0.8) {
-        ctx.fillStyle = 'rgba(0, 255, 0, 0.12)'
+        ctx.fillStyle = 'rgba(0, 255, 136, 0.12)'
         ctx.fillText(char, x, y)
       }
 

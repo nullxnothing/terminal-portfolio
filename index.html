@@ -34,14 +34,43 @@
       <a href="https://x.com/nullxnothing" target="_blank" rel="noopener" class="nav-link mono">X</a>
       <a href="https://github.com/nullxnothing" target="_blank" rel="noopener" class="nav-link mono">GitHub</a>
     </div>
+    <button id="menu-toggle" class="menu-toggle mono" aria-label="Toggle menu">
+      <span>MENU</span>
+      <span class="menu-icon">+</span>
+    </button>
   </nav>
+
+  <!-- Mobile menu overlay -->
+  <div id="menu-overlay" class="menu-overlay">
+    <div class="menu-overlay-inner">
+      <a href="#about" class="menu-overlay-link">About</a>
+      <a href="#projects" class="menu-overlay-link">Projects</a>
+      <a href="#tools" class="menu-overlay-link">Tools</a>
+      <div class="menu-overlay-divider"></div>
+      <a href="https://x.com/nullxnothing" target="_blank" rel="noopener" class="menu-overlay-link small mono">x.com/nullxnothing</a>
+      <a href="https://github.com/nullxnothing" target="_blank" rel="noopener" class="menu-overlay-link small mono">github.com/nullxnothing</a>
+    </div>
+  </div>
 
   <!-- Main content -->
   <main id="content">
 
+    <!-- Grid overlay -->
+    <div class="grid-overlay" aria-hidden="true">
+      <div class="grid-page">
+        <div class="grid-line"></div><div class="grid-line"></div><div class="grid-line"></div>
+        <div class="grid-line"></div><div class="grid-line"></div><div class="grid-line"></div>
+        <div class="grid-line"></div><div class="grid-line"></div><div class="grid-line"></div>
+        <div class="grid-line"></div><div class="grid-line"></div><div class="grid-line"></div>
+      </div>
+    </div>
+
     <!-- Hero -->
     <section id="hero" class="section">
       <div class="grid-page">
+        <div class="hero-visual">
+          <img src="/assets/arcan3/ball-render.webp" alt="" class="hero-image" loading="eager" />
+        </div>
         <div class="hero-content">
           <p class="hero-tag mono uppercase">Solana Developer</p>
           <h1 class="hero-name" data-scramble>nullxnothing</h1>
