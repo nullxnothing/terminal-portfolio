@@ -26,19 +26,6 @@ const projects = [
     github: 'nullxnothing/quanta',
   },
   {
-    slug: 'solblade',
-    desc: 'AI-native Solana wallet CLI with scoped MCP server',
-    tags: ['TypeScript', 'MCP'],
-    github: 'nullxnothing/solblade',
-  },
-  {
-    slug: 'trenchlens',
-    desc: 'Real-time Solana token intelligence and analytics dashboard',
-    tags: ['TypeScript', 'Next.js'],
-    github: 'nullxnothing/trenchlens',
-    live: 'trenchlens.vercel.app',
-  },
-  {
     slug: 'devcred-agent',
     desc: 'Autonomous agent monitoring pump.fun launches and scoring deployer reputation',
     tags: ['TypeScript', 'AI Agent'],

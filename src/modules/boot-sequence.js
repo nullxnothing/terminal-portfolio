@@ -3,6 +3,7 @@ import { TextPlugin } from 'gsap/TextPlugin'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { scrambleReveal } from './scramble.js'
 import { renderProjects } from './projects.js'
+import { renderTools } from './tools.js'
 
 gsap.registerPlugin(TextPlugin, ScrollTrigger)
 
@@ -125,6 +126,19 @@ function revealProjects(speedMult) {
 
   scrambleReveal(projectsLabel, 'Projects', { duration: 400 }).then(() => {
     renderProjects()
+    revealTools(speedMult)
+  })
+}
+
+function revealTools(speedMult) {
+  const toolsSection = document.getElementById('tools-section')
+  const toolsLabel = document.getElementById('tools-label')
+
+  toolsSection.style.visibility = 'visible'
+  gsap.to(toolsSection, { opacity: 1, duration: 0.4 })
+
+  scrambleReveal(toolsLabel, 'Tools', { duration: 400 }).then(() => {
+    renderTools()
     revealEnd()
   })
 }

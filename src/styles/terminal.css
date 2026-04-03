@@ -138,6 +138,11 @@
   text-shadow: 0 0 8px rgba(0, 255, 0, 0.4);
 }
 
+/* Tools */
+#tools-section {
+  margin: 0 0 3rem;
+}
+
 /* Terminal end */
 #terminal-end {
   margin: 4rem 0 6rem;
