@@ -179,29 +179,6 @@
 }
 
 /* ═══════════════════════════════════════ */
-/* Grid overlay                           */
-/* ═══════════════════════════════════════ */
-.grid-overlay {
-  position: fixed;
-  inset: 0;
-  z-index: 0;
-  pointer-events: none;
-}
-
-.grid-overlay .grid-page {
-  height: 100%;
-}
-
-.grid-line {
-  border-right: 1px solid rgba(234, 234, 234, 0.04);
-  height: 100%;
-}
-
-.grid-line:first-child {
-  border-left: 1px solid rgba(234, 234, 234, 0.04);
-}
-
-/* ═══════════════════════════════════════ */
 /* Sections                               */
 /* ═══════════════════════════════════════ */
 .section {
